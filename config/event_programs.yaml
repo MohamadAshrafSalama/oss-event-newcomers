@@ -1,0 +1,52 @@
+# Event program definitions for newcomer classification
+# Used by src/events/ extraction scripts
+
+programs:
+  gsoc:
+    name: "Google Summer of Code"
+    url: "https://summerofcode.withgoogle.com"
+    years: [2019, 2020, 2021, 2022, 2023]
+    data_dir: "data/events/gsoc"
+
+  lfx:
+    name: "LFX Mentorship"
+    url: "https://mentorship.lfx.linuxfoundation.org"
+    years: [2020, 2021, 2022, 2023]
+    data_dir: "data/events/lfx"
+
+  hacktoberfest:
+    name: "Hacktoberfest"
+    url: "https://hacktoberfest.com"
+    years: [2019, 2020, 2021, 2022, 2023]
+    data_dir: "data/events/hacktoberfest"
+    topic_label: "hacktoberfest"
+
+  twentyfourpr:
+    name: "24 Pull Requests"
+    url: "https://24pullrequests.com"
+    years: [2019, 2020, 2021, 2022]
+    data_dir: "data/events/24pr"
+
+  mlh:
+    name: "MLH Fellowship"
+    url: "https://fellowship.mlh.io"
+    years: [2020, 2021, 2022, 2023]
+    data_dir: "data/events/mlh"
+
+mining:
+  github_api_base: "https://api.github.com"
+  rate_limit_buffer: 100
+  max_retries: 3
+  retry_delay: 60
+  page_size: 100
+
+contributor_selection:
+  min_commits_event_window: 1
+  max_commits_before_event: 0
+  organic_match_ratio: 1  # 1:1 matching
+  match_on: ["repo", "commit_count_quartile"]
+
+journey:
+  window_months: 24
+  activity_types: ["commit", "pr", "issue", "review", "comment"]
+  core_threshold_percentile: 80

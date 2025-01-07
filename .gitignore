@@ -1,0 +1,46 @@
+# Data directories (too large for VCS)
+/data/
+*.csv
+*.json
+*.parquet
+*.pkl
+*.pickle
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+*.egg
+.venv/
+venv/
+env/
+.env
+
+# Jupyter
+.ipynb_checkpoints/
+*.ipynb
+
+# OS
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Logs and outputs
+*.log
+logs/
+output/
+results/
+
+# Git worktrees (internal)
+.claude/
